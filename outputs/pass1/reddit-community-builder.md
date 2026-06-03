@@ -34,5 +34,5 @@ r/smallbusiness, r/Entrepreneur, r/sweatystartup, r/Restaurateur, r/Truckers, an
 ## Cross-lane flags
 
 - **Outbound strategist:** Pain vocabulary (COJ fear, daily-sweep shock, payroll crunches) feeds cold-call scripts and voicemail openers.
-- **Loan officer / product lens:** MCA complaint language shapes compliance guardrails and qualification page copy.
+- **Loan officer / product lens:** MCA complaint language shapes compliance guardrails and qualification page.
 - **Trend researcher:** Track whether CFPB 2025-2026 rulemaking shifts SMB sentiment on alternative lenders.
