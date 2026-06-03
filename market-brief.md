@@ -1,6 +1,6 @@
 # Pass 1 Reconciliation: Market Brief
 
-Ranked by impact on funded deals under the constraints (90 days, 300 USD, solo, always-on). This cuts.
+Ranked by impact on funded deals under the constraints. This cuts.
 
 ## Top opportunities to pursue (ranked)
 
@@ -17,9 +17,9 @@ Ranked by impact on funded deals under the constraints (90 days, 300 USD, solo, 
 ## Parked opportunities (real, not now)
 
 - **LinkedIn signal monitoring** [Outbound]: competes with UCC and calls for scarce hours; revisit if UCC flow runs thin.
-- **Referral ask at funding** [Outbound]: high value but only pays once deals close; switch on in week 3 and after.
+- **Referral ask at funding** [Outbound]: high value but only pays once deals close; switch on from week 3.
 - **Reddit and community**: zero funded deals in 90 days. Keep only as zero-cost pain-language harvesting for copy.
-- **Targeting stacked or declined merchants broadly** [Trend]: highest default and clawback risk; pursue only the clean near-payoff subset already inside items 1 and 4.
+- **Targeting stacked or declined merchants broadly** [Trend]: highest default and clawback risk; pursue only the clean near-payoff subset inside items 1 and 4.
 - **Compliant messaging as a standalone growth play** [Trend]: fold into the page and compliance baseline; table stakes, not an opportunity.
 
 ## Key market needs to address
