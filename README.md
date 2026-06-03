@@ -5,7 +5,7 @@ A chained, multi-lens audit of the SDR operating-system plan. Three passes (mark
 ## Files
 
 - `plan.md`: the plan under audit. Edit this and rerun whenever the plan changes.
-- `AUDIT-RUNBOOK.md`: the self-contained procedure. Defines all 18 lenses, the three passes, both reconciliations, and the scope ruling. No external repo or install needed.
+- `AUDIT-RUNBOOK.md`: the procedure. Lists all 18 lenses with their persona file paths in the agency-agents repo, the three passes, both reconciliations, and the scope ruling. Each lens reads its persona file from that repo before auditing (Step 0 loads them, by clone or by raw URL).
 - `outputs/pass1`, `outputs/pass2`, `outputs/pass3`: one audit file per lens, written during the run.
 - `outputs/final/scope-ruling.md`: the scope authority's ruling.
 - `market-brief.md`, `strategy-brief.md`: the narrowed briefs produced between passes.

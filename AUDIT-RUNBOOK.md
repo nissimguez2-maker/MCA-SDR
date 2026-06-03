@@ -1,16 +1,34 @@
-# MCA SDR Plan Audit: Self-Contained Runbook
+# MCA SDR Plan Audit: Runbook
 
-This file is the whole audit. Claude Code: read this and `plan.md`, then execute the steps in order. You do not need any external repository; every lens is defined below. (Optional: if the agency-agents subagents happen to be installed, you may route each lens to its matching subagent. If not, adopt each lens yourself.)
+This file is the whole audit. Claude Code: read this and `plan.md`, then execute the steps in order. Each lens is a real persona from the agency-agents repo. You must read each persona file and adopt it before running that lens.
 
 ## Rules for execution
 
-- Work one numbered step at a time. After each step, write the output file or files, show what you produced, and wait for the operator to say continue before the next step.
-- For each lens in a pass, fully adopt that specialist perspective and audit only its lane. Be specific and blunt. No generic praise.
+- First do STEP 0 to load the personas. Then work one numbered step at a time. After each step, write the output file or files, show what you produced, and wait for the operator to say continue before the next step.
+- For each lens in a pass, read its persona file from the agency-agents repo (path listed beside the lens), fully adopt that specialist's identity, mission, and method, then audit only its lane. The one-line description beside each lens is a focus hint only. The persona file is the source of truth.
+- If a persona file cannot be read, say so explicitly for that lens. Do not improvise a lens you could not load.
+- Be specific and blunt. No generic praise.
 - Keep each lens audit under 400 words and each reconciliation brief under 600 words.
 - Write outputs to the paths given. Create folders as needed: `outputs/pass1`, `outputs/pass2`, `outputs/pass3`, `outputs/final`.
 - No em dashes anywhere in any output. Operator preference.
-- If web search is available, use it for the Pass 1 market lenses and the compliance lens. Otherwise, list claims to verify instead of asserting them.
+- If web search is available, use it for the Pass 1 market lenses and the compliance lens. Otherwise list claims to verify instead of asserting them.
 - The two reconciliation briefs (Steps 2 and 4) are narrowing steps, not summaries. They cut. After each, invite the operator to edit the brief before continuing.
+
+## STEP 0: Load the lenses from the agency-agents repo
+
+Make the persona files available. Either clone the repo into the workspace:
+
+```
+git clone https://github.com/msitarzewski/agency-agents.git
+```
+
+or, if cloning is not available, fetch each persona file at runtime from its raw URL:
+
+```
+https://raw.githubusercontent.com/msitarzewski/agency-agents/main/<path>
+```
+
+where `<path>` is the path listed beside each lens below (for example `sales/sales-outbound-strategist.md`).
 
 ## Shared context (every lens uses this)
 
@@ -29,14 +47,14 @@ Pass 1 Market, then reconcile to market-brief, then Pass 2 Strategy reads it, th
 
 ## STEP 1: Pass 1, Market and opportunities
 
-Read `plan.md` for context, then keep focus on the external market. Run these six lenses one at a time:
+Read `plan.md` for context, then keep focus on the external market. For each lens: read its persona file, adopt it, then audit. Run one at a time.
 
-1. Trend Researcher: market size, segments, competitive landscape, where MCA demand concentrates.
-2. Outbound Strategist: which merchant signals indicate funding need, the ideal customer profile, where warm prospects are found.
-3. Investment Researcher: segment economics, which merchant profiles are fundable and profitable, risk.
-4. Loan Officer Assistant: what the funding process actually requires, what makes a merchant approvable.
-5. Reddit Community Builder: where merchants gather, the questions and pain points they voice, unmet needs.
-6. Search Query Analyst: the search intent and language merchants use when seeking funding, demand signals.
+1. Trend Researcher (`product/product-trend-researcher.md`): market size, segments, competitive landscape, where MCA demand concentrates.
+2. Outbound Strategist (`sales/sales-outbound-strategist.md`): which merchant signals indicate funding need, the ideal customer profile, where warm prospects are found.
+3. Investment Researcher (`finance/finance-investment-researcher.md`): segment economics, which merchant profiles are fundable and profitable, risk.
+4. Loan Officer Assistant (`specialized/loan-officer-assistant.md`): what the funding process actually requires, what makes a merchant approvable.
+5. Reddit Community Builder (`marketing/marketing-reddit-community-builder.md`): where merchants gather, the questions and pain points they voice, unmet needs.
+6. Search Query Analyst (`paid-media/paid-media-search-query-analyst.md`): the search intent and language merchants use when seeking funding, demand signals.
 
 Output per lens, written to `outputs/pass1/<lens>.md`:
 
@@ -62,14 +80,14 @@ Then invite the operator to edit `market-brief.md` before Step 3.
 
 ## STEP 3: Pass 2, Strategy and tactics
 
-Read `market-brief.md` and `plan.md`. Run these six lenses one at a time:
+Read `market-brief.md` and `plan.md`. For each lens: read its persona file, adopt it, then audit. Run one at a time.
 
-1. Deal Strategist: positioning and win strategy for the chosen opportunities.
-2. Sales Outreach: the cold-to-warm cadences, openers, multi-touch sequences.
-3. Discovery Coach: call structure and the qualifying questions behind tiering.
-4. Behavioral Nudge Engine: the warming-page strategy, progressive qualification, completion and booking lift.
-5. Growth Hacker: the outbound-to-page funnel design and lean experiments to test it.
-6. Pipeline Analyst: prioritization strategy, deal velocity, where to focus limited solo time.
+1. Deal Strategist (`sales/sales-deal-strategist.md`): positioning and win strategy for the chosen opportunities.
+2. Sales Outreach (`specialized/sales-outreach.md`): the cold-to-warm cadences, openers, multi-touch sequences.
+3. Discovery Coach (`sales/sales-discovery-coach.md`): call structure and the qualifying questions behind tiering.
+4. Behavioral Nudge Engine (`product/product-behavioral-nudge-engine.md`): the warming-page strategy, progressive qualification, completion and booking lift.
+5. Growth Hacker (`marketing/marketing-growth-hacker.md`): the outbound-to-page funnel design and lean experiments to test it.
+6. Pipeline Analyst (`sales/sales-pipeline-analyst.md`): prioritization strategy, deal velocity, where to focus limited solo time.
 
 Output per lens, written to `outputs/pass2/<lens>.md`:
 
@@ -97,14 +115,14 @@ Then invite the operator to edit `strategy-brief.md` before Step 5.
 
 ## STEP 5: Pass 3, Implementation
 
-Read `strategy-brief.md` and `plan.md`. Run these six lenses one at a time:
+Read `strategy-brief.md` and `plan.md`. For each lens: read its persona file, adopt it, then audit. Run one at a time.
 
-1. Backend Architect: Supabase schema, tables, events, source-of-truth design.
-2. Data Engineer: the intake, enrich, and dedupe pipeline for sourced and company leads.
-3. Email Intelligence Engineer: parsing inbound replies into structured, reasoning-ready records.
-4. Automation Governance Architect: the n8n and agent layer, failure surface, what runs when, permissioning.
-5. Autonomous Optimization Architect: model routing, token tracking, the 300 USD cap as a hard guardrail.
-6. Legal Compliance Checker: TCPA, DNC, state MCA disclosure, consent capture. List claims to verify.
+1. Backend Architect (`engineering/engineering-backend-architect.md`): Supabase schema, tables, events, source-of-truth design.
+2. Data Engineer (`engineering/engineering-data-engineer.md`): the intake, enrich, and dedupe pipeline for sourced and company leads.
+3. Email Intelligence Engineer (`engineering/engineering-email-intelligence-engineer.md`): parsing inbound replies into structured, reasoning-ready records.
+4. Automation Governance Architect (`specialized/automation-governance-architect.md`): the n8n and agent layer, failure surface, what runs when, permissioning.
+5. Autonomous Optimization Architect (`engineering/engineering-autonomous-optimization-architect.md`): model routing, token tracking, the 300 USD cap as a hard guardrail.
+6. Legal Compliance Checker (`support/support-legal-compliance-checker.md`): TCPA, DNC, state MCA disclosure, consent capture. List claims to verify.
 
 Output per lens, written to `outputs/pass3/<lens>.md`:
 
@@ -119,7 +137,7 @@ Output per lens, written to `outputs/pass3/<lens>.md`:
 
 ## STEP 6: Scope ruling
 
-Adopt the Senior Project Manager as scope authority. Read `strategy-brief.md` and every file in `outputs/pass3`. Rule on what to build now, what to defer, and what to cut, to reach the smallest version that still closes deals under the 300 USD per month and one-operator constraints. Write `outputs/final/scope-ruling.md`.
+Read the Senior Project Manager persona (`project-management/project-manager-senior.md`) and adopt it as scope authority. Read `strategy-brief.md` and every file in `outputs/pass3`. Rule on what to build now, what to defer, and what to cut, to reach the smallest version that still closes deals under the 300 USD per month and one-operator constraints. Write `outputs/final/scope-ruling.md`.
 
 ## STEP 7: Final reconcile into FINAL-PLAN.md
 
