@@ -1,6 +1,6 @@
 # Search Query Analyst Audit
 
-**Lane:** Query intent and language SMB owners use when seeking funding, as intent intelligence for the qualification page, opener copy, and lead scoring.
+**Lane:** Query intent and language SMB owners use when seeking funding, as intent intelligence for the qualification page, openers, and lead scoring.
 
 ## Market Reality
 
@@ -13,7 +13,7 @@ The page must mirror transactional language in the first sentence or contacts bo
 ## Opportunities to Seize
 
 1. **Mirror transactional language in headline and first CTA.** "Fast approval," "bad credit OK," "same-day funding possible" match the words that prompted the click.
-2. **Add a distress disqualifier at form step two.** "Do you have an MCA you cannot repay?" routes yes answers off the booking path before any call time is spent.
+2. **Add a distress disqualifier at form step two.** "Do you have an MCA you cannot repay?" routes yes answers off the booking path before call time is spent.
 3. **Score urgency n-grams in free-text inputs.** Payroll, urgent, this week, overdue outweigh structured fields as warmth signals.
 4. **Reserve informational copy for nurture.** Factor-rate education belongs in follow-up, not the headline.
 
