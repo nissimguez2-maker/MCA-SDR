@@ -1,4 +1,4 @@
-**Lane:** Segment unit economics: fundable AND profitable merchant profiles, clawback exposure, and solo broker hour allocation inside a 90-day commission window.
+**Lane:** Segment unit economics: fundable AND profitable merchant profiles, clawback exposure, and solo broker hour allocation on a 90-day commission run.
 
 ---
 
