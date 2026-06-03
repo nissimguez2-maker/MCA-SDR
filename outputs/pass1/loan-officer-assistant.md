@@ -2,7 +2,7 @@
 
 **Market reality:**
 
-MCA is cash-flow underwriting. Required file: 3-6 months business bank statements (all pages, no gaps), one-page application, government-issued ID, voided check; card-heavy merchants add processing statements. Funders score total deposits, average daily balance, deposit frequency, NSF count, negative days, and existing MCA debits. Floor: $10-15k/month deposits, 6+ months in business, FICO as low as 500-550. Clean file funds in 24-72 hours. Partial statements are the top deal-killer. Heavy stacking or chronic negative days yields declines or outsized factor rates. TRID, LE/CD, rescission, HMDA do not apply.
+MCA is cash-flow underwriting. Required file: 3-6 months business bank statements (all pages, no gaps), one-page application, government-issued ID, voided check; card-heavy merchants add processing statements. Funders score total deposits, average daily balance, deposit frequency, NSF count, negative days, and existing MCA debits. Floor: $10-15k/month deposits, 6+ months in business, FICO as low as 500-550. Clean file funds in 24-72 hours. Partial statements are the top deal-killer. Heavy stacking or chronic negative days yields declines or outsized rates. TRID, LE/CD, rescission, HMDA do not apply.
 
 **What the market needs:**
 
@@ -17,8 +17,8 @@ The gap between "interested merchant" and "complete file submitted" is where mos
 
 **Hard truths and risks:**
 
-1. Self-reported data is unreliable. A merchant claiming $20k/month can show $9k deposits and two live MCA positions on statements. Confirm deposit range and MCA status on the call before committing Tier 1 time.
-2. DeepSeek as default model for workflows touching bank statements or PII is a data-security liability: non-US model, unclear data retention. Resolve before document automation goes live.
+1. Self-reported data is unreliable. A merchant claiming $20k/month can show $9k deposits and two live MCA positions on statements. Confirm deposit range and stacking status on the call before Tier 1 commitment.
+2. DeepSeek as default model for workflows touching bank statements or PII is a data-security liability: non-US model, unclear retention. Resolve before document automation goes live.
 3. No post-submission tracking exists. Stip lists and offer-expiry windows are where funded deals leak silently.
 
 **Facts to verify:**
@@ -26,10 +26,10 @@ The gap between "interested merchant" and "complete file submitted" is where mos
 - Minimum deposit floor by funder tier in 2026 (reported $5k to $15k+).
 - NSF and negative-day tolerance by funder category (reported 0 to 5 days).
 - Whether direct funders waive processing statements for low-card-volume merchants.
-- US states requiring commercial financing disclosures from brokers in 2026.
+- US states requiring commercial financing broker disclosures in 2026.
 
 **Cross-lane flags:**
 
-- Compliance: state disclosure obligations attach at document collection and offer presentation; consent must cover submission to multiple funders.
+- Compliance: state disclosure obligations attach at document collection and offer presentation; consent must cover multi-funder submission.
 - Tech: confirm Supabase is US-region before bank statements or PII enter the system.
 - Warming: stacking and negative-day questions belong on the qualification page.

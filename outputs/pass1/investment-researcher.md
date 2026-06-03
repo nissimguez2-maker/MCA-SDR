@@ -2,9 +2,9 @@
 
 ---
 
-**Market reality:** ISO/broker commission is 5-15% of funded amount baked into factor-rate markup. Clawbacks on early default are standard at 60-90 days. EV per funded deal: high-risk (stacked, under 6 months TIB, sub-$15k/month) = ~$288 after 40% clawback. Mid-tier (12+ months TIB, $20-40k/month, one stack) = ~$2,520 after 20% default. Sweet-spot (18+ months TIB, $40k+/month, no stack) = ~$6,160 after 12% default. A 20x EV gap per worked lead. Cold-to-funded conversion: 2-3% on raw aged leads; 8-12% on screened warm inbound. The $18-22B market figure likely blends revenue-based financing and factoring; ISO-originated broker volume is materially smaller.
+**Market reality:** ISO/broker commission 5-15% of funded amount baked into factor-rate markup. Clawbacks on early default standard at 60-90 days. EV per funded deal: high-risk (stacked, under 6 months TIB, sub-$15k/month) = ~$288 after 40% clawback. Mid-tier (12+ months TIB, $20-40k/month, one stack) = ~$2,520 after 20% default. Sweet-spot (18+ months TIB, $40k+/month, no stack) = ~$6,160 after 12% default. A 20x EV gap per worked lead. Conversion: 2-3% on raw aged leads; 8-12% on screened warm inbound. The $18-22B market figure likely blends revenue-based financing and factoring; ISO-originated broker volume is materially smaller.
 
-**What the market needs:** Brokers screening for clawback survivability, not just approvability. Funders price factor rates to absorb their default; brokers absorb clawbacks with no offset.
+**What the market needs:** Brokers screening for clawback survivability, not just approvability. Funders price factor rates to absorb default; brokers absorb clawbacks with no offset.
 
 ---
 
@@ -22,25 +22,25 @@
 
 **Hard truths and risks:**
 
-1. **Clawback risk is asymmetric and unaddressed.** One $70k advance defaulting in week 8 wipes commission on two other funded deals. No default-probability gating exists. No funded-date field in the Supabase schema.
+1. **Clawback risk is asymmetric and unaddressed.** One $70k advance defaulting in week 8 wipes commission on two other funded deals. No default-probability gating, no funded-date field in Supabase.
 
-2. **Aged-lead vendors route toxic files.** The same recycled lead goes to 5-10 brokers simultaneously. Vendor-aged default rates likely exceed 30-40%. The plan lists vendors as legitimate with no caveat.
+2. **Aged-lead vendors route toxic files.** The same recycled lead goes to 5-10 brokers simultaneously. Vendor-aged default rates likely exceed 30-40%. Listed as legitimate in the plan with no caveat.
 
-3. **Tier 3 nurture is inviable on a 90-day window.** Any lead needing 30+ days to fund cannot clear the clawback window.
+3. **Tier 3 nurture is inviable on a 90-day window.** Leads needing 30+ days to fund cannot clear the clawback window.
 
 ---
 
 **Facts to verify:**
 
-- Clawback window by funder: 60 vs. 90 vs. deal-specific. Most important number in this model.
-- ISO commission ceiling: some funders cap at 10%. Confirm against ISO agreements.
+- Clawback window by funder: 60 vs. 90 vs. deal-specific. Most critical number in the model.
+- ISO commission ceiling: some funders cap at 10%; confirm against ISO agreements.
 - Default rate by industry: restaurants vs. trucking vs. construction differ from the 15-20% blended figure.
-- $18-22B scope: confirm whether source includes revenue-based financing and factoring.
+- $18-22B scope: confirm whether it includes revenue-based financing and factoring.
 
 ---
 
 **Cross-lane flags:**
 
 - Compliance: NY and CA disclosure laws affect qualification page copy and consent capture.
-- Tech/ops: Supabase needs funded-date and clawback-window fields from day one; retrofitting loses tracking on early deals.
-- Outbound: Raw UCC lists without a stack-check filter send the highest-default segment to the top of the queue.
+- Tech/ops: Supabase needs funded-date and clawback-window fields from day one or early-deal commission tracking is lost.
+- Outbound: Raw UCC lists without a stack-check filter push the highest-default segment to the top of the queue.
